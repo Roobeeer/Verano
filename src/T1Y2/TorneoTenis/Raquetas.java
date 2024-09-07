@@ -1,6 +1,6 @@
 package T1.TorneoTenis;
 
-public class Raquetas {
+public class    Raquetas {
 
     public String marca;
     public String modelo;

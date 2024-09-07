@@ -5,10 +5,14 @@ public class Jugadores {
     private String pasaporte;
     private Raquetas raqueta;
 
-    public Jugadores(String nombre, String pasaporte){
+    public Jugadores(String nombre, String pasaporte, Raquetas raqueta){
         this.nombre = nombre;
         this.pasaporte = pasaporte;
-        raqueta = new Raquetas();
+        this.raqueta = raqueta;
+    }
+
+    public boolean mismaRaqueta(Jugadores j){
+        return this.raqueta.equals(j.raqueta);
     }
 
     public String getNombre(){
@@ -36,4 +40,14 @@ public class Jugadores {
     }
 
 
+    public boolean equals(Object o){
+        Jugadores j = (Jugadores) o;
+        return this.pasaporte.equals(j.pasaporte);
+    }
+
+
+    @Override
+    public String toString(){
+        return "Jugador : "+nombre+" || Pasaporte ; "+pasaporte+" || Raqueta : "+raqueta;
+    }
 }
